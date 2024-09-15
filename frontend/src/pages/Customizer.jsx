@@ -67,7 +67,7 @@ const Customizer = () => {
       console.log(data);
 
       if (!data.photo) {
-        throw new Error("Image data not found in response");
+        throw new Error("Update your API key");
       }
 
       handleDecals(type, `data:image/png;base64,${data.photo}`)

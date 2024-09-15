@@ -33,7 +33,6 @@ router.route('/').post(async (req, res) => {
   } catch (error) {
     // console.error(error);
     console.error('OpenAI API Error:', error.response ? error.response.data : error.message);
-    alert("Update your API key");
     res.status(500).json({ message: "Something went wrong" })
   }
 })

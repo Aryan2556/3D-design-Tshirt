@@ -3,9 +3,6 @@ import React from 'react'
 import CustomButton from './CustomButton'
 
 const FilePicker = ({ file, setFile, readFile }) => {
-
-  const defalutImage='';
-
   return (
     <div className="filepicker-container">
       <div className="flex-1 flex flex-col">
@@ -37,11 +34,6 @@ const FilePicker = ({ file, setFile, readFile }) => {
           handleClick={() => readFile('full')}
           customStyles="text-xs"
         />
-      </div>
-
-      <div className="mt-4">
-        <img 
-         src={file ? URL.createObjectURL(file) : defalutImage} alt="Logo" className='w-32 h-32 object-contain' />
       </div>
     </div>
   )
